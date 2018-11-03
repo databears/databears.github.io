@@ -1,0 +1,18 @@
+# Site settings
+title: Data Bears
+email: jiang@honggang.io
+description: "Algorithm and engineering about artificial intelligence."
+baseurl: ""
+url: "http://databears.github.io"
+github_username:  databears
+
+# Build settings
+markdown: kramdown
+remote_theme: github.com/rmsubekti/nangka
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
