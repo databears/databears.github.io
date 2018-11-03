@@ -1,18 +1,41 @@
 # Site settings
 title: Data Bears
-email: jiang@honggang.io
-description: "Algorithm and engineering about artificial intelligence."
-baseurl: ""
-url: "http://databears.github.io"
-github_username:  databears
+email: your@mail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Welcome to Data Bears.
+url: "https://databears.github.io" # the base hostname & protocol for your site
+google_analytics: #your GA unique id, e.g. UA-xxxxxxxx-x
+disqus_username: #Your disqus_username to add comments on the post
+
+# Optional settings
+github: databears
 
 # Build settings
 markdown: kramdown
-remote_theme: github.com/rmsubekti/nangka
-permalink: pretty
 
-highlighter: rouge
-kramdown:
-  input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
+sass:
+    style: compressed
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+
+defaults:
+    - {scope: {type: posts}, values: {layout: post, permalink : '/:year/:title/'}}
+
+include:
+  - _pages
+
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+paginate: 5
+paginate_path: 'p/:num'

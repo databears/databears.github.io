@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% seo title=false %}
+  {% if site.google_plus %}<link rel="author" href="https://plus.google.com/+{{site.google_plus}}"/>{% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/nangka.css" | prepend: site.baseurl }}">
+
+  {% if site.google_analytics %}
+  <script>
+  (function(s,u,b,e,k,t,i){s['GoogleAnalyticsObject']=k;s[k]=s[k]||function(){
+    (s[k].q=s[k].q||[]).push(arguments)},s[k].l=1*new Date();t=u.createElement(b),
+    i=u.getElementsByTagName(b)[0];t.async=1;t.src=e;i.parentNode.insertBefore(t,i)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+  </script>
+  {% endif %}
+
+</head>
