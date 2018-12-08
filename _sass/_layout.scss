@@ -176,7 +176,11 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-
+    img {
+    	clear: both;
+    	display: block;
+    	margin:auto;
+    }
     h2 {
         font-size: 32px;
 
